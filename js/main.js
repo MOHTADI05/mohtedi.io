@@ -686,7 +686,7 @@ if ('IntersectionObserver' in window) {
 // ============================================
 console.log('%c👋 Hello, Developer!', 'color: #39ff14; font-size: 24px; font-weight: bold;');
 console.log('%cInterested in how this portfolio was built?', 'color: #f5f5f0; font-size: 16px;');
-console.log('%cCheck out my GitHub: https://github.com/MOHTADI05', 'color: #39ff14; font-size: 14px;');
+console.log('%cCheck out my GitHub:https://github.com/MOHTADI0505', 'color: #39ff14; font-size: 14px;');
 console.log('%c✨ Built with passion by Mohtadi Marmouri', 'color: #f5f5f0; font-size: 14px;');
 
 // ============================================

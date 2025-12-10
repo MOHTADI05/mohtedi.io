@@ -36,7 +36,7 @@ A modern, responsive portfolio website with stunning parallax animations and dar
 1. Clone or download this repository
 
 ```bash
-git clone https://github.com/MOHTADI05/mohtedi.io.git
+git clonehttps://github.com/MOHTADI0505/mohtedi.io.git
 cd mohtedi.io
 ```
 

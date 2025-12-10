@@ -36,7 +36,7 @@ A modern, responsive portfolio website with stunning parallax animations and dar
 1. Clone or download this repository
 
 ```bash
-git clone https://github.com/mohtadi/mohtedi.io.git
+git clone https://github.com/MOHTADI05/mohtedi.io.git
 cd mohtedi.io
 ```
 
@@ -219,7 +219,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Phone: +49 15510 553818
 - Location: Offenbach am Main, Germany
 - LinkedIn: [linkedin.com/in/mohtadi-marmouri](https://linkedin.com/in/mohtadi-marmouri)
-- GitHub: [github.com/mohtadi](https://github.com/mohtadi)
+- GitHub: [github.com/mohtadi](https://github.com/MOHTADI05)
 
 ## 🙏 Acknowledgments
 

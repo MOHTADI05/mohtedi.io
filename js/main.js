@@ -12,6 +12,8 @@ const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const scrollTopBtn = document.getElementById('scroll-top');
+const mobileOverlay = document.getElementById('mobile-overlay');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
 
 // ============================================
 // PAGE LOADER
@@ -169,24 +171,64 @@ function initializeParticles() {
 // ============================================
 function setupNavigation() {
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (navToggle) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            if (mobileOverlay) {
+                mobileOverlay.classList.toggle('active');
+            }
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+    }
+
+    // Close menu when clicking on overlay
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close menu when clicking close button
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            if (mobileOverlay) {
+                mobileOverlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
+        });
+    }
 
     // Close menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            if (mobileOverlay) {
+                mobileOverlay.classList.remove('active');
+            }
+            document.body.style.overflow = '';
         });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+        if (navMenu && navToggle) {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                if (mobileOverlay) {
+                    mobileOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+            }
         }
     });
 
@@ -207,6 +249,22 @@ function setupNavigation() {
             link.classList.remove('active');
             if (link.getAttribute('href').slice(1) === current) {
                 link.classList.add('active');
+            }
+        });
+    });
+    
+    // Fix for mobile project cards - ensure they're clickable
+    const projectCards = document.querySelectorAll('.project-link-card');
+    projectCards.forEach(card => {
+        // Prevent event propagation issues on mobile
+        card.addEventListener('touchstart', function(e) {
+            // Allow the touch to propagate
+        }, { passive: true });
+        
+        card.addEventListener('click', function(e) {
+            // Ensure the link works on mobile
+            if (this.href) {
+                window.location.href = this.href;
             }
         });
     });
@@ -628,8 +686,36 @@ if ('IntersectionObserver' in window) {
 // ============================================
 console.log('%c👋 Hello, Developer!', 'color: #39ff14; font-size: 24px; font-weight: bold;');
 console.log('%cInterested in how this portfolio was built?', 'color: #f5f5f0; font-size: 16px;');
-console.log('%cCheck out my GitHub: https://github.com/mohtadi', 'color: #39ff14; font-size: 14px;');
+console.log('%cCheck out my GitHub: https://github.com/MOHTADI05', 'color: #39ff14; font-size: 14px;');
 console.log('%c✨ Built with passion by Mohtadi Marmouri', 'color: #f5f5f0; font-size: 14px;');
+
+// ============================================
+// FILTER BROWSER EXTENSION ERRORS (Optional)
+// ============================================
+// This filters out common browser extension errors from console
+// These errors don't affect your website functionality
+if (typeof console !== 'undefined') {
+    const originalError = console.error;
+    console.error = function(...args) {
+        const errorString = args.join(' ');
+        // Filter out common extension-related errors
+        if (
+            errorString.includes('content-scripts.js') ||
+            errorString.includes('injection-tss-mv3.js') ||
+            errorString.includes('feature flag') ||
+            errorString.includes('tab info') ||
+            errorString.includes('enableSearchHijackingNotification') ||
+            errorString.includes('enableBreachNotification') ||
+            errorString.includes('Error getting tab') ||
+            errorString.includes('Failed to get Tab ID')
+        ) {
+            // Silently ignore extension errors
+            return;
+        }
+        // Show real errors from your website
+        originalError.apply(console, args);
+    };
+}
 
 // ============================================
 // EXPORT FOR MODULE USAGE (OPTIONAL)

@@ -91,6 +91,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 **Maintained by**: Mohtadi Marmouri (mohtadimarmouri@gmail.com)
-**Repository**: https://github.com/mohtadi/mohtedi.io
+**Repository**: https://github.com/MOHTADI05/mohtedi.io
 **Website**: https://mohtadi.github.io/mohtedi.io
 

@@ -206,6 +206,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 body::before {
@@ -244,6 +246,7 @@ a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition-smooth);
+    -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -315,6 +318,59 @@ img {
 /* ============================================
    NAVIGATION
    ============================================ */
+
+/* Mobile Menu Overlay */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.mobile-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile Menu Close Button */
+.mobile-menu-close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: rgba(57, 255, 20, 0.1);
+        border: 1px solid rgba(57, 255, 20, 0.3);
+        border-radius: 50%;
+        color: var(--neon-green);
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-close:hover {
+        background: rgba(57, 255, 20, 0.2);
+        transform: rotate(90deg);
+    }
+}
+
 .navbar {
     position: fixed;
     top: 15px;
@@ -484,7 +540,10 @@ img {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 10001;
+    padding: 10px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .nav-toggle span {
@@ -1047,6 +1106,8 @@ img {
 
 .project-link-card {
     display: flex;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .project-card::before {
@@ -1886,23 +1947,36 @@ img {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+        width: 98%;
+        top: 10px;
+        border-radius: 25px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 75%;
+        max-width: 300px;
         height: 100vh;
         background: linear-gradient(135deg, 
-                    rgba(18, 53, 19, 0.3) 0%, 
-                    rgba(10, 14, 13, 0.5) 50%,
-                    rgba(18, 53, 19, 0.3) 100%);
+                    rgba(18, 53, 19, 0.95) 0%, 
+                    rgba(10, 14, 13, 0.98) 50%,
+                    rgba(18, 53, 19, 0.95) 100%);
         backdrop-filter: blur(40px) saturate(200%);
         -webkit-backdrop-filter: blur(40px) saturate(200%);
-        border-left: 1px solid rgba(57, 255, 20, 0.3);
-        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
-        padding: 100px 40px;
-        transition: right 0.4s ease;
-        z-index: 999;
+        border-left: 2px solid rgba(57, 255, 20, 0.5);
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.8);
+        padding: 100px 30px;
+        transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999;
+        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1911,15 +1985,59 @@ img {
     
     .nav-list {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
     }
     
     .nav-link {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        display: block !important;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        color: var(--text-primary) !important;
+        position: relative;
+        text-shadow: none;
+    }
+    
+    .nav-link::before {
+        display: none;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(57, 255, 20, 0.15);
+        transform: translateX(5px);
+        color: var(--neon-green) !important;
+    }
+    
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list li {
+        opacity: 1;
+        visibility: visible;
     }
     
     .nav-toggle {
         display: flex;
+        z-index: 10001;
+        position: relative;
+        background: rgba(57, 255, 20, 0.1);
+        border-radius: 8px;
+        padding: 8px;
+        border: 1px solid rgba(57, 255, 20, 0.3);
+    }
+    
+    .nav-toggle span {
+        background: var(--neon-green) !important;
+        box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
     }
     
     .nav-toggle.active span:nth-child(1) {
@@ -1936,11 +2054,15 @@ img {
     
     .hero-cta {
         flex-direction: column;
+        width: 100%;
     }
     
     .cta-btn {
         width: 100%;
         justify-content: center;
+        padding: 18px 30px;
+        font-size: 1rem;
+        display: inline-flex;
     }
     
     .floating-code-snippets {
@@ -1995,6 +2117,15 @@ img {
         padding: 25px;
     }
     
+    .project-card {
+        min-height: 400px;
+    }
+    
+    .cta-btn {
+        padding: 16px 28px;
+        font-size: 0.95rem;
+    }
+    
     .blog-image {
         height: 200px;
     }
@@ -2008,6 +2139,10 @@ img {
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    .view-project {
+        font-size: 0.85rem;
     }
 }
 

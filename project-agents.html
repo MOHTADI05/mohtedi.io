@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-Agent Systems & AI Innovation - Research Projects">
+    <title>Multi-Agent Systems & AI Innovation | Mohtadi Marmouri</title>
+    
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">MM</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content" data-aos="fade-up">
+                <div class="project-category-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>Research • Innovation</span>
+                </div>
+                <h1 class="project-hero-title">Multi-Agent Systems & AI Innovation</h1>
+                <p class="project-hero-subtitle">Experimental AI Research and Cutting-Edge Prototypes</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2022-Present</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-flask"></i>
+                        <span>Research Projects</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Innovation Lab</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Slideshow -->
+    <section class="project-slideshow">
+        <div class="container">
+            <div class="slideshow-wrapper" data-aos="fade-up">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="assets/projects/agents-1.jpg" alt="System Architecture">
+                        <div class="slide-caption">
+                            <h3>Multi-Agent Architecture</h3>
+                            <p>Distributed AI system design and implementation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/agents-2.jpg" alt="Agent Interaction">
+                        <div class="slide-caption">
+                            <h3>Agent Communication</h3>
+                            <p>Sophisticated agent interaction protocols</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/agents-3.jpg" alt="Performance">
+                        <div class="slide-caption">
+                            <h3>Performance Metrics</h3>
+                            <p>Real-time system monitoring and optimization</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/agents-4.jpg" alt="Research">
+                        <div class="slide-caption">
+                            <h3>Research Results</h3>
+                            <p>Experimental findings and innovations</p>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main" data-aos="fade-right">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Engaged in cutting-edge research and development of multi-agent systems, exploring distributed 
+                        artificial intelligence, autonomous decision-making, and intelligent coordination frameworks. 
+                        These experimental projects push the boundaries of AI innovation, focusing on scalable, 
+                        self-organizing systems that can adapt and learn from their environment.
+                    </p>
+                    
+                    <h3>Research Areas</h3>
+                    <ul class="responsibilities-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Distributed AI systems with autonomous agent coordination
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Reinforcement learning for multi-agent environments
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Swarm intelligence and collective behavior modeling
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Game theory applications in agent decision-making
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Self-organizing systems and emergent behaviors
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Communication protocols for agent collaboration
+                        </li>
+                    </ul>
+                    
+                    <h3>Innovation Prototypes</h3>
+                    <p>
+                        Developed several proof-of-concept systems demonstrating advanced AI capabilities including 
+                        autonomous negotiation agents, distributed problem-solving networks, and adaptive resource 
+                        allocation systems. Each prototype explores novel approaches to coordination, learning, and 
+                        optimization in multi-agent scenarios, contributing to the broader understanding of distributed 
+                        intelligence.
+                    </p>
+                    
+                    <h3>Research Impact</h3>
+                    <p>
+                        The research has yielded promising results in improving coordination efficiency in distributed 
+                        systems, with applications in smart cities, autonomous vehicles, and resource management. 
+                        Experimental findings have been documented and shared within the research community, contributing 
+                        to ongoing discussions about the future of distributed AI systems.
+                    </p>
+                </div>
+                
+                <div class="details-sidebar" data-aos="fade-left">
+                    <div class="sidebar-card glass-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenAI Gym</span>
+                            <span class="tech-tag">JADE</span>
+                            <span class="tech-tag">Mesa</span>
+                            <span class="tech-tag">Ray</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">ROS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Key Achievements</h3>
+                        <div class="achievement-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Multiple agent architectures</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-brain"></i>
+                            <p>Novel RL algorithms</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-network-wired"></i>
+                            <p>Distributed coordination</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Performance improvements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Project Links</h3>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Research Papers</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-flask"></i>
+                            <span>Lab Notebooks</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Related Projects</h2>
+            <div class="related-grid">
+                <a href="project-dyslexia.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-brain"></i>
+                    <h3>Dyslexia Learning Platform</h3>
+                    <p>AI-powered educational tools</p>
+                </a>
+                <a href="project-talan.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science at Talan</h3>
+                    <p>ML models and predictive analytics</p>
+                </a>
+                <a href="project-erp.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cogs"></i>
+                    <h3>ERP & FinTech</h3>
+                    <p>Enterprise solutions and dashboards</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MM</h2>
+                    <p>Building the future with AI & Data Science</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-slideshow.js"></script>
+</body>
+</html>
+

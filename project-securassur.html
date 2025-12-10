@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecurAssur - Cross-Platform Insurance Management System">
+    <title>SecurAssur Insurance Platform | Mohtadi Marmouri</title>
+    
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">MM</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content" data-aos="fade-up">
+                <div class="project-category-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Full-Stack Development</span>
+                </div>
+                <h1 class="project-hero-title">SecurAssur Insurance Platform</h1>
+                <p class="project-hero-subtitle">Cross-Platform Insurance Management System</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2023</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Cross-Platform</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <span>Enterprise Solution</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Slideshow -->
+    <section class="project-slideshow">
+        <div class="container">
+            <div class="slideshow-wrapper" data-aos="fade-up">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="assets/projects/securassur-1.jpg" alt="Dashboard">
+                        <div class="slide-caption">
+                            <h3>Comprehensive Dashboard</h3>
+                            <p>Centralized view of all insurance operations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/securassur-2.jpg" alt="Portfolio Management">
+                        <div class="slide-caption">
+                            <h3>Portfolio Management</h3>
+                            <p>Advanced policy and claims tracking</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/securassur-3.jpg" alt="RBAC System">
+                        <div class="slide-caption">
+                            <h3>Role-Based Access Control</h3>
+                            <p>Secure multi-user environment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/securassur-4.jpg" alt="Mobile App">
+                        <div class="slide-caption">
+                            <h3>Mobile Application</h3>
+                            <p>Native iOS and Android experience</p>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main" data-aos="fade-right">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed SecurAssur, a comprehensive cross-platform insurance management system that streamlines 
+                        policy administration, claims processing, and portfolio management. The application serves both 
+                        web and mobile platforms with a unified backend, ensuring consistent user experience across devices.
+                    </p>
+                    
+                    <h3>Key Features</h3>
+                    <ul class="responsibilities-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Built with Symfony framework for robust backend operations
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Developed mobile apps using CodenameOne for iOS and Android
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Created desktop application with JavaFX for administrative tasks
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Implemented comprehensive RBAC system for security
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Centralized SQL database for data consistency
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Real-time synchronization across all platforms
+                        </li>
+                    </ul>
+                    
+                    <h3>Technical Architecture</h3>
+                    <p>
+                        The system uses a three-tier architecture with Symfony powering the backend API, MySQL for 
+                        data persistence, and multiple frontend technologies: CodenameOne for mobile cross-platform 
+                        development and JavaFX for desktop administration. All components communicate via RESTful APIs 
+                        with JWT authentication and role-based authorization.
+                    </p>
+                    
+                    <h3>Security & Compliance</h3>
+                    <p>
+                        SecurAssur implements enterprise-grade security measures including role-based access control, 
+                        encrypted data transmission, secure authentication, and compliance with insurance industry 
+                        regulations. The system handles sensitive customer data with utmost care and meets all regulatory 
+                        requirements.
+                    </p>
+                </div>
+                
+                <div class="details-sidebar" data-aos="fade-left">
+                    <div class="sidebar-card glass-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Symfony</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">CodenameOne</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Key Achievements</h3>
+                        <div class="achievement-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>3 platforms (Web, iOS, Android)</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-users-cog"></i>
+                            <p>Complete RBAC implementation</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-database"></i>
+                            <p>Centralized data management</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Enterprise security standards</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Project Links</h3>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Related Projects</h2>
+            <div class="related-grid">
+                <a href="project-library.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-university"></i>
+                    <h3>National Library Platform</h3>
+                    <p>Student banking with FinTech models</p>
+                </a>
+                <a href="project-erp.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-cogs"></i>
+                    <h3>ERP & FinTech</h3>
+                    <p>Enterprise resource planning solutions</p>
+                </a>
+                <a href="project-talan.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science at Talan</h3>
+                    <p>Banking data analysis with ML</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MM</h2>
+                    <p>Building the future with AI & Data Science</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-slideshow.js"></script>
+</body>
+</html>
+

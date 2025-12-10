@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="National Library of Tunisia Platform - Student Banking & FinTech">
+    <title>National Library Platform | Mohtadi Marmouri</title>
+    
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="css/interactive-cards.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">MM</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content" data-aos="fade-up">
+                <div class="project-category-badge">
+                    <i class="fas fa-university"></i>
+                    <span>Software Engineering</span>
+                </div>
+                <h1 class="project-hero-title">National Library of Tunisia Platform</h1>
+                <p class="project-hero-subtitle">Student Banking Platform with Advanced FinTech Models</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tunis, Tunisia</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Software Engineering Intern</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Slideshow -->
+    <section class="project-slideshow">
+        <div class="container">
+            <div class="slideshow-wrapper" data-aos="fade-up">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="assets/projects/library-1.jpg" alt="Platform Dashboard">
+                        <div class="slide-caption">
+                            <h3>Modern Banking Dashboard</h3>
+                            <p>Intuitive interface for student financial management</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/library-2.jpg" alt="Banking Features">
+                        <div class="slide-caption">
+                            <h3>Advanced Banking Features</h3>
+                            <p>Budgeting, savings, and investment tracking</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/library-3.jpg" alt="Investment Models">
+                        <div class="slide-caption">
+                            <h3>Investment Simulation Models</h3>
+                            <p>Monte Carlo and Black-Scholes pricing engines</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/library-4.jpg" alt="Analytics">
+                        <div class="slide-caption">
+                            <h3>Financial Analytics</h3>
+                            <p>Real-time insights and reporting tools</p>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main" data-aos="fade-right">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed a comprehensive student banking platform for the National Library of Tunisia, 
+                        integrating advanced financial models and budgeting tools. The platform enables students 
+                        to manage their finances, simulate investments, and learn about financial planning through 
+                        real-world mathematical models.
+                    </p>
+                    
+                    <h3>Key Features</h3>
+                    <ul class="responsibilities-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Built full-stack application with Angular frontend and Spring Boot backend
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Implemented Flask middleware for data processing and API orchestration
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Developed Monte Carlo simulation engine for investment risk analysis
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Integrated Black-Scholes model for options pricing and derivatives
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Created interactive budgeting tools with real-time expense tracking
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Designed secure authentication system with role-based access control
+                        </li>
+                    </ul>
+                    
+                    <h3>Technical Architecture</h3>
+                    <p>
+                        The platform uses a modern microservices architecture with Angular for the responsive frontend, 
+                        Flask as the middleware layer handling complex calculations, and Spring Boot for the core 
+                        banking operations and data persistence. All services communicate via RESTful APIs with 
+                        JWT authentication.
+                    </p>
+                    
+                    <h3>Impact</h3>
+                    <p>
+                        The platform provided students with practical financial literacy tools, helping them understand 
+                        investment principles and risk management. Over 500 students used the platform during the pilot 
+                        phase, with positive feedback on the intuitive interface and educational value.
+                    </p>
+                </div>
+                
+                <div class="details-sidebar" data-aos="fade-left">
+                    <div class="sidebar-card glass-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Key Achievements</h3>
+                        <div class="achievement-item">
+                            <i class="fas fa-users"></i>
+                            <p>500+ student users</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-calculator"></i>
+                            <p>Monte Carlo & Black-Scholes models</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <p>Real-time budget tracking</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Secure banking operations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Project Links</h3>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Related Projects</h2>
+            <div class="related-grid">
+                <a href="project-talan.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science at Talan</h3>
+                    <p>Banking data analysis with Azure & ML</p>
+                </a>
+                <a href="project-securassur.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>SecurAssur Insurance</h3>
+                    <p>Cross-platform insurance management</p>
+                </a>
+                <a href="project-erp.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cogs"></i>
+                    <h3>ERP & FinTech</h3>
+                    <p>Enterprise resource planning solutions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MM</h2>
+                    <p>Building the future with AI & Data Science</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-slideshow.js"></script>
+</body>
+</html>
+

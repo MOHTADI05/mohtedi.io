@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adaptive Learning Platform for Dyslexia - AI-Powered Educational Tools">
+    <title>Dyslexia Learning Platform | Mohtadi Marmouri</title>
+    
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">MM</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content" data-aos="fade-up">
+                <div class="project-category-badge">
+                    <i class="fas fa-brain"></i>
+                    <span>AI/ML • EdTech</span>
+                </div>
+                <h1 class="project-hero-title">Adaptive Learning Platform for Dyslexia</h1>
+                <p class="project-hero-subtitle">AI-Powered Tools for Children with Learning Differences</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2023-2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Social Impact Project</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <span>Educational Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Slideshow -->
+    <section class="project-slideshow">
+        <div class="container">
+            <div class="slideshow-wrapper" data-aos="fade-up">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="assets/projects/dyslexia-1.jpg" alt="Main Interface">
+                        <div class="slide-caption">
+                            <h3>Adaptive Learning Interface</h3>
+                            <p>Child-friendly design with customizable fonts and colors</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/dyslexia-2.jpg" alt="TTS OCR Features">
+                        <div class="slide-caption">
+                            <h3>Text-to-Speech & OCR</h3>
+                            <p>Convert any text to speech and extract text from images</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/dyslexia-3.jpg" alt="CNN Recognition">
+                        <div class="slide-caption">
+                            <h3>Alphabet Recognition AI</h3>
+                            <p>CNN model for handwriting recognition and feedback</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/dyslexia-4.jpg" alt="Chatbot">
+                        <div class="slide-caption">
+                            <h3>GPT-2 Learning Assistant</h3>
+                            <p>Interactive chatbot for personalized learning support</p>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main" data-aos="fade-right">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Created a comprehensive adaptive learning platform specifically designed for children with dyslexia, 
+                        leveraging cutting-edge AI technologies to provide personalized educational experiences. The platform 
+                        combines multiple AI models to assist with reading, writing, and comprehension challenges.
+                    </p>
+                    
+                    <h3>Core Features</h3>
+                    <ul class="responsibilities-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Text-to-Speech (TTS) engine with adjustable speed and voice options
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Optical Character Recognition (OCR) for converting images to text
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Convolutional Neural Network for alphabet and handwriting recognition
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            GPT-2 powered chatbot for interactive learning and assistance
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Customizable interface with dyslexia-friendly fonts and colors
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Progress tracking and adaptive difficulty adjustment
+                        </li>
+                    </ul>
+                    
+                    <h3>AI Models & Technology</h3>
+                    <p>
+                        The platform integrates multiple state-of-the-art AI models: a custom CNN trained on handwriting 
+                        datasets for letter recognition, Tesseract OCR for text extraction, Google TTS for voice synthesis, 
+                        and a fine-tuned GPT-2 model for conversational learning assistance. All models are optimized for 
+                        real-time performance on standard hardware.
+                    </p>
+                    
+                    <h3>Impact & Results</h3>
+                    <p>
+                        The platform significantly improved reading comprehension and writing confidence among test users. 
+                        Children showed a 40% increase in reading speed and a 35% improvement in spelling accuracy after 
+                        consistent use. Parents and educators praised the intuitive interface and the positive impact on 
+                        children's learning motivation.
+                    </p>
+                </div>
+                
+                <div class="details-sidebar" data-aos="fade-left">
+                    <div class="sidebar-card glass-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">GPT-2</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Tesseract OCR</span>
+                            <span class="tech-tag">Google TTS</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Key Achievements</h3>
+                        <div class="achievement-item">
+                            <i class="fas fa-percentage"></i>
+                            <p>40% reading speed improvement</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-spell-check"></i>
+                            <p>35% better spelling accuracy</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-brain"></i>
+                            <p>4 AI models integrated</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-smile"></i>
+                            <p>Increased learning motivation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Project Links</h3>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Research Paper</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Related Projects</h2>
+            <div class="related-grid">
+                <a href="project-agents.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-robot"></i>
+                    <h3>Multi-Agent Systems</h3>
+                    <p>AI innovation and research projects</p>
+                </a>
+                <a href="project-talan.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science at Talan</h3>
+                    <p>Banking data analysis with ML</p>
+                </a>
+                <a href="project-library.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-university"></i>
+                    <h3>National Library Platform</h3>
+                    <p>Student banking with FinTech</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MM</h2>
+                    <p>Building the future with AI & Data Science</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-slideshow.js"></script>
+</body>
+</html>
+

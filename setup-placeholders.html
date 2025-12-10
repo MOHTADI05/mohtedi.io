@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0a0e0d;
+            color: #f5f5f0;
+        }
+        h1 {
+            color: #39ff14;
+            text-align: center;
+        }
+        .instructions {
+            background: rgba(57, 255, 20, 0.1);
+            border: 1px solid #39ff14;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .image-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .image-section h3 {
+            color: #39ff14;
+        }
+        img {
+            max-width: 100%;
+            border: 2px solid #39ff14;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #123513;
+            color: #39ff14;
+            border: 2px solid #39ff14;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #1a4d1b;
+        }
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #39ff14;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖼️ Portfolio Assets Setup</h1>
+    
+    <div class="instructions">
+        <h2>📋 Instructions</h2>
+        <ol>
+            <li>Right-click on each image below</li>
+            <li>Select "Save image as..."</li>
+            <li>Save to the correct location as specified</li>
+            <li>Or click the download button under each image</li>
+        </ol>
+        <p><strong>Note:</strong> These are placeholder images. Replace them with your actual photos and graphics for the final website.</p>
+    </div>
+
+    <div class="image-section">
+        <h3>1. Profile Picture</h3>
+        <p>Save as: <code>assets/profile.jpg</code></p>
+        <img src="https://via.placeholder.com/500x500/123513/39ff14?text=Mohtadi+Marmouri" alt="Profile Picture" id="profile">
+        <br>
+        <a href="https://via.placeholder.com/500x500/123513/39ff14?text=Mohtadi+Marmouri" download="profile.jpg" class="download-btn">Download Profile Picture</a>
+    </div>
+
+    <div class="image-section">
+        <h3>2. Blog Images</h3>
+        <p>Save all to: <code>assets/blog/</code></p>
+        
+        <h4>AI & FinTech</h4>
+        <p>Filename: <code>ai-fintech.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=AI+%26+Machine+Learning+in+FinTech" alt="AI FinTech" id="ai-fintech">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=AI+%26+Machine+Learning+in+FinTech" download="ai-fintech.jpg" class="download-btn">Download</a>
+        
+        <h4>Data Pipeline</h4>
+        <p>Filename: <code>data-pipeline.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=ETL+Pipelines+%26+Apache+Spark" alt="Data Pipeline" id="data-pipeline">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=ETL+Pipelines+%26+Apache+Spark" download="data-pipeline.jpg" class="download-btn">Download</a>
+        
+        <h4>DevOps</h4>
+        <p>Filename: <code>devops.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=CI%2FCD+%26+Cloud+DevOps" alt="DevOps" id="devops">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=CI%2FCD+%26+Cloud+DevOps" download="devops.jpg" class="download-btn">Download</a>
+        
+        <h4>Studies</h4>
+        <p>Filename: <code>studies.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=Academic+Journey" alt="Studies" id="studies">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=Academic+Journey" download="studies.jpg" class="download-btn">Download</a>
+        
+        <h4>Internship</h4>
+        <p>Filename: <code>internship.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=Internship+Experience" alt="Internship" id="internship">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=Internship+Experience" download="internship.jpg" class="download-btn">Download</a>
+        
+        <h4>Neural Networks</h4>
+        <p>Filename: <code>neural-networks.jpg</code></p>
+        <img src="https://via.placeholder.com/800x400/123513/39ff14?text=Deep+Learning+%26+AI" alt="Neural Networks" id="neural-networks">
+        <br>
+        <a href="https://via.placeholder.com/800x400/123513/39ff14?text=Deep+Learning+%26+AI" download="neural-networks.jpg" class="download-btn">Download</a>
+    </div>
+
+    <div class="instructions">
+        <h2>✅ Next Steps</h2>
+        <ol>
+            <li>Create the <code>assets</code> and <code>assets/blog</code> directories if they don't exist</li>
+            <li>Download all images above to their respective locations</li>
+            <li>Add your CV/Resume as <code>assets/Mohtadi_Marmouri_CV.pdf</code></li>
+            <li>Replace placeholder images with professional photos when ready</li>
+            <li>Open <code>index.html</code> in your browser to view the portfolio</li>
+        </ol>
+        <p><strong>Tip:</strong> For better looking placeholders, visit <a href="https://unsplash.com" target="_blank" style="color: #39ff14;">Unsplash</a> or <a href="https://pexels.com" target="_blank" style="color: #39ff14;">Pexels</a> to find free stock images related to technology, AI, and data science.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #39ff14;">
+        <p>Built by Mohtadi Marmouri | 2025</p>
+        <p><a href="index.html" style="color: #39ff14;">← Back to Portfolio</a></p>
+    </div>
+
+    <script>
+        // Auto-create directory structure reminder
+        console.log('%c📁 Directory Structure Required:', 'color: #39ff14; font-size: 16px; font-weight: bold;');
+        console.log('assets/');
+        console.log('  ├── profile.jpg');
+        console.log('  ├── Mohtadi_Marmouri_CV.pdf');
+        console.log('  └── blog/');
+        console.log('      ├── ai-fintech.jpg');
+        console.log('      ├── data-pipeline.jpg');
+        console.log('      ├── devops.jpg');
+        console.log('      ├── studies.jpg');
+        console.log('      ├── internship.jpg');
+        console.log('      └── neural-networks.jpg');
+    </script>
+</body>
+</html>
+

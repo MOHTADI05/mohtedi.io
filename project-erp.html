@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ERP Modules & FinTech Dashboards - Enterprise Solutions">
+    <title>ERP & FinTech Solutions | Mohtadi Marmouri</title>
+    
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">MM</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            
+            <div class="project-hero-content" data-aos="fade-up">
+                <div class="project-category-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Enterprise • FinTech</span>
+                </div>
+                <h1 class="project-hero-title">ERP Modules & FinTech Dashboards</h1>
+                <p class="project-hero-subtitle">Enterprise Resource Planning and Business Intelligence Solutions</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2022-2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <span>Enterprise Projects</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Business Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Slideshow -->
+    <section class="project-slideshow">
+        <div class="container">
+            <div class="slideshow-wrapper" data-aos="fade-up">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="assets/projects/erp-1.jpg" alt="ERP Dashboard">
+                        <div class="slide-caption">
+                            <h3>Comprehensive ERP Dashboard</h3>
+                            <p>Centralized business operations management</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/erp-2.jpg" alt="FinTech Analytics">
+                        <div class="slide-caption">
+                            <h3>FinTech Analytics Platform</h3>
+                            <p>Real-time financial data visualization</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/erp-3.jpg" alt="Module Overview">
+                        <div class="slide-caption">
+                            <h3>Modular Architecture</h3>
+                            <p>Scalable and customizable modules</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <img src="assets/projects/erp-4.jpg" alt="Reports">
+                        <div class="slide-caption">
+                            <h3>Advanced Reporting</h3>
+                            <p>Automated reports and insights</p>
+                        </div>
+                    </div>
+                    
+                    <button class="slide-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slide-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-main" data-aos="fade-right">
+                    <h2>Project Overview</h2>
+                    <p>
+                        Developed comprehensive ERP modules and interactive FinTech dashboards for enterprise-level 
+                        business operations. The solutions integrate various business functions including finance, 
+                        inventory, human resources, and customer relationship management into unified, scalable platforms 
+                        with real-time analytics and automated reporting capabilities.
+                    </p>
+                    
+                    <h3>Core Modules</h3>
+                    <ul class="responsibilities-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Financial management with real-time transaction tracking
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Inventory and supply chain management system
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Human resources and payroll automation
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Customer relationship management (CRM) integration
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Business intelligence dashboards with data visualization
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Automated reporting and analytics engine
+                        </li>
+                    </ul>
+                    
+                    <h3>FinTech Dashboard Features</h3>
+                    <p>
+                        The FinTech dashboards provide real-time insights into financial operations, market trends, 
+                        and business performance metrics. Built with modern web technologies, they offer interactive 
+                        charts, customizable widgets, and drill-down capabilities for detailed analysis. Integration 
+                        with multiple data sources ensures comprehensive visibility across all financial aspects.
+                    </p>
+                    
+                    <h3>Enterprise Impact</h3>
+                    <p>
+                        The ERP solutions streamlined business operations, reducing manual data entry by 60% and 
+                        improving decision-making speed by 45%. Automated workflows eliminated redundant processes, 
+                        while real-time analytics enabled proactive management of resources and opportunities. The 
+                        modular design allows organizations to scale and customize based on their specific needs.
+                    </p>
+                </div>
+                
+                <div class="details-sidebar" data-aos="fade-left">
+                    <div class="sidebar-card glass-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Key Achievements</h3>
+                        <div class="achievement-item">
+                            <i class="fas fa-percentage"></i>
+                            <p>60% reduction in manual work</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <p>45% faster decision-making</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <p>Modular & scalable design</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Real-time analytics</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card glass-card">
+                        <h3>Project Links</h3>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View on GitHub</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Live Demo</span>
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Documentation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2 data-aos="fade-up">Related Projects</h2>
+            <div class="related-grid">
+                <a href="project-talan.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Science at Talan</h3>
+                    <p>Banking data analysis with Azure & ML</p>
+                </a>
+                <a href="project-library.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-university"></i>
+                    <h3>National Library Platform</h3>
+                    <p>Student banking with FinTech models</p>
+                </a>
+                <a href="project-securassur.html" class="related-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>SecurAssur Insurance</h3>
+                    <p>Cross-platform insurance management</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MM</h2>
+                    <p>Building the future with AI & Data Science</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#projects">Projects</a></li>
+                            <li><a href="index.html#skills">Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/project-slideshow.js"></script>
+</body>
+</html>
+

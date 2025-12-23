@@ -473,11 +473,22 @@ function setupContactForm() {
                 message: document.getElementById('message').value
             };
             
+            // Get translated success message
+            const t = translations[currentLanguage] || translations.en;
+            const successMsg = t.contact?.messageSent || 'Message sent successfully! I\'ll get back to you soon.';
+            
             // Show success message (you can integrate with a backend here)
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            showNotification(successMsg, 'success');
             
             // Reset form
             contactForm.reset();
+            
+            // Update placeholders after reset
+            setTimeout(() => {
+                if (typeof updatePlaceholders === 'function') {
+                    updatePlaceholders();
+                }
+            }, 100);
         });
     }
 }

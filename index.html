@@ -36,6 +36,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
 </head>
 <body class="loading">
     <!-- AI Thinking Loader -->
@@ -58,6 +59,31 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-overlay" id="mobile-overlay"></div>
     
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="language-switcher">
+        <button class="lang-switcher-btn" id="lang-toggle" aria-label="Change language">
+            <span id="current-lang-flag">🇬🇧</span>
+        </button>
+        <div class="language-dropdown" id="language-dropdown">
+            <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">
+                <span class="flag">🇬🇧</span>
+                <span class="lang-name">English</span>
+            </button>
+            <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">
+                <span class="flag">🇩🇪</span>
+                <span class="lang-name">Deutsch</span>
+            </button>
+            <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">
+                <span class="flag">🇫🇷</span>
+                <span class="lang-name">Français</span>
+            </button>
+            <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">
+                <span class="flag">🇸🇦</span>
+                <span class="lang-name">العربية</span>
+            </button>
+        </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -65,23 +91,23 @@
                 <a href="#home">MM</a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <button class="mobile-menu-close" id="mobile-menu-close">
+                <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
                     <i class="fas fa-times"></i>
                 </button>
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -97,35 +123,35 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-greeting" data-aos="fade-down">
-                    <span class="wave">👋</span> Hello, I'm
+                    <span class="wave">👋</span> <span data-i18n="hero.greeting">Hello, I'm</span>
                 </div>
                 <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
                     Mohtadi Marmouri
                 </h1>
                 <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                    <span class="typing-text">AI • Data Science • Software Engineering • FinTech</span>
+                    <span class="typing-text" data-i18n="hero.subtitle">AI • Data Science • Software Engineering • FinTech</span>
                 </div>
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300" data-i18n="hero.description">
                     Computer Science & Data Science student passionate about building intelligent systems and data-driven solutions
                 </p>
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
                     <a href="#projects" class="cta-btn primary-btn">
-                        <span>View My Projects</span>
+                        <span data-i18n="hero.viewProjects">View My Projects</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="assets/Mohtadi_Marmouri_CV.pdf" class="cta-btn secondary-btn" download>
-                        <span>Download CV</span>
+                        <span data-i18n="hero.downloadCV">Download CV</span>
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
                 <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
-                    <a href="https://github.com/MOHTADI05" target="_blank" class="social-link">
+                    <a href="https://github.com/MOHTADI05" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit my GitHub profile">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank" class="social-link">
+                    <a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit my LinkedIn profile">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:mohtadimarmouri@gmail.com" class="social-link">
+                    <a href="mailto:mohtadimarmouri@gmail.com" class="social-link" aria-label="Send me an email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -150,7 +176,7 @@
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
             </div>
-            <span>Scroll Down</span>
+            <span data-i18n="common.scrollDown">Scroll Down</span>
         </div>
     </section>
 
@@ -158,9 +184,9 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Who I Am</span>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about technology and continuous learning</p>
+                <span class="section-tag" data-i18n="about.tag">Who I Am</span>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Passionate about technology and continuous learning</p>
             </div>
             
             <div class="about-content">
@@ -172,28 +198,27 @@
                         </div>
                         <div class="portrait-info">
                             <h3>Mohtadi Marmouri</h3>
-                            <p>Based in Offenbach, Germany</p>
+                            <p><span data-i18n="about.basedIn">Based in</span> München, Germany</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="about-text" data-aos="fade-left">
                     <div class="about-description">
-                        <p>
+                        <p data-i18n="about.description1">
                             I'm a Computer Science & Data Science student with a passion for artificial intelligence, 
                             data engineering, and software development. Currently pursuing my studies at 
                             <strong>Philipps-Universität Marburg, Germany</strong>, with additional master studies in 
                             <strong>Actuarial Science & Finance</strong> at Le Mans Université.
                         </p>
-                        <p>
+                        <p data-i18n="about.description2">
                             My journey in technology is driven by curiosity and a desire to create impactful solutions. 
                             I specialize in building intelligent systems, designing scalable data pipelines, and developing 
                             secure backend architectures. With experience spanning AI/ML, cloud computing, and FinTech, 
                             I'm committed to driving digital transformation through innovative technology.
                         </p>
                         <p>
-                            I also completed my engineering program at <strong>ESPRIT Tunisia</strong>, where I developed 
-                            a strong foundation in software engineering and data science principles.
+                            <span data-i18n="about.description3">I also completed my engineering program at</span> <strong>ESPRIT Tunisia</strong>, <span data-i18n="about.description3b">where I developed a strong foundation in software engineering and data science principles.</span>
                         </p>
                     </div>
                     
@@ -209,7 +234,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Location</h4>
-                                <p>Offenbach, Germany</p>
+                                <p>München, Germany</p>
                             </div>
                         </div>
                         <div class="highlight-item">
@@ -225,7 +250,7 @@
             
             <!-- Timeline -->
             <div class="timeline-section" data-aos="fade-up">
-                <h3 class="timeline-title">Academic Journey</h3>
+                <h3 class="timeline-title" data-i18n="about.timelineTitle">Academic Journey</h3>
                 <div class="timeline">
                     <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
                         <div class="timeline-dot"></div>
@@ -265,9 +290,9 @@
     <section id="projects" class="projects-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcasing my experience in AI, Data Engineering, and Software Development</p>
+                <span class="section-tag" data-i18n="projects.tag">My Work</span>
+                <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Showcasing my experience in AI, Data Engineering, and Software Development</p>
             </div>
             
             <div class="projects-grid">
@@ -297,7 +322,7 @@
                             <i class="fas fa-map-marker-alt"></i> Tunis, Tunisia
                         </span>
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -328,7 +353,7 @@
                             <i class="fas fa-map-marker-alt"></i> Tunis, Tunisia
                         </span>
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -359,7 +384,7 @@
                             <i class="fas fa-heart"></i> Social Impact
                         </span>
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -390,7 +415,7 @@
                             <i class="fas fa-mobile-alt"></i> Cross-Platform
                         </span>
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -418,7 +443,7 @@
                     </div>
                     <div class="project-footer">
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -445,7 +470,7 @@
                     </div>
                     <div class="project-footer">
                         <span class="view-project">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
                 </a>
@@ -457,9 +482,9 @@
     <section id="skills" class="skills-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">What I Do</span>
-                <h2 class="section-title">Skills & Services</h2>
-                <p class="section-subtitle">Comprehensive technical expertise across multiple domains</p>
+                <span class="section-tag" data-i18n="skills.tag">What I Do</span>
+                <h2 class="section-title" data-i18n="skills.title">Skills & Services</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">Comprehensive technical expertise across multiple domains</p>
             </div>
             
             <div class="skills-grid">
@@ -557,7 +582,7 @@
             <!-- Security Compliance -->
             <div class="security-section" data-aos="fade-up" data-aos-delay="700">
                 <h3 class="security-title">
-                    <i class="fas fa-shield-alt"></i> Security Compliance Highlights
+                    <i class="fas fa-shield-alt"></i> <span data-i18n="skills.securityTitle">Security Compliance Highlights</span>
                 </h3>
                 <div class="security-grid">
                     <div class="security-item">
@@ -605,13 +630,13 @@
     <section id="blog" class="blog-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Insights & Learning</span>
-                <h2 class="section-title">Blog & Articles</h2>
-                <p class="section-subtitle">Sharing knowledge and experiences in tech</p>
+                <span class="section-tag" data-i18n="blog.tag">Insights & Learning</span>
+                <h2 class="section-title" data-i18n="blog.title">Blog & Articles</h2>
+                <p class="section-subtitle" data-i18n="blog.subtitle">Sharing knowledge and experiences in tech</p>
             </div>
             
             <div class="blog-categories" data-aos="fade-up" data-aos-delay="100">
-                <button class="blog-filter active" data-category="all">All Posts</button>
+                <button class="blog-filter active" data-category="all" data-i18n="blog.allPosts">All Posts</button>
                 <button class="blog-filter" data-category="ai-ml">AI/ML & FinTech</button>
                 <button class="blog-filter" data-category="data-engineering">Data Engineering</button>
                 <button class="blog-filter" data-category="devops">DevOps</button>
@@ -635,7 +660,7 @@
                         </div>
                         <h3>Machine Learning in Financial Technology: A Practical Guide</h3>
                         <p>Exploring how ML models transform risk assessment, fraud detection, and algorithmic trading in modern FinTech applications.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -654,7 +679,7 @@
                         </div>
                         <h3>Building Scalable ETL Pipelines with Apache Spark</h3>
                         <p>Best practices and lessons learned from implementing production-grade data pipelines on Azure Databricks.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -673,7 +698,7 @@
                         </div>
                         <h3>CI/CD Best Practices for Cloud-Native Applications</h3>
                         <p>A comprehensive guide to implementing automated deployment pipelines with Azure DevOps and Docker.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -692,7 +717,7 @@
                         </div>
                         <h3>Studying Computer Science Across Three Countries</h3>
                         <p>Reflections on my academic journey through Tunisia, France, and Germany, and the unique perspectives gained.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -711,7 +736,7 @@
                         </div>
                         <h3>From Intern to Data Scientist: Lessons from Talan</h3>
                         <p>Key insights and technical skills gained during my data science internship, working with enterprise-scale data.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -730,7 +755,7 @@
                         </div>
                         <h3>Deep Learning for Accessibility: Dyslexia Learning Platform</h3>
                         <p>How CNNs and GPT-2 can be leveraged to create adaptive learning experiences for children with learning differences.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="blog-link"><span data-i18n="blog.readMore">Read More</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -741,21 +766,21 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Contact Me</h2>
-                <p class="section-subtitle">Let's discuss your next project or opportunity</p>
+                <span class="section-tag" data-i18n="contact.tag">Get In Touch</span>
+                <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Let's discuss your next project or opportunity</p>
             </div>
             
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right">
                     <div class="contact-card glass-card">
-                        <h3>Contact Information</h3>
+                        <h3 data-i18n="contact.title">Contact Information</h3>
                         <div class="info-item">
                             <div class="info-icon">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="info-text">
-                                <span class="info-label">Name</span>
+                                <span class="info-label" data-i18n="contact.name">Name</span>
                                 <span class="info-value">Mohtadi Marmouri</span>
                             </div>
                         </div>
@@ -764,7 +789,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="info-text">
-                                <span class="info-label">Email</span>
+                                <span class="info-label" data-i18n="contact.email">Email</span>
                                 <a href="mailto:mohtadimarmouri@gmail.com" class="info-value">mohtadimarmouri@gmail.com</a>
                             </div>
                         </div>
@@ -773,7 +798,7 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="info-text">
-                                <span class="info-label">Phone</span>
+                                <span class="info-label" data-i18n="contact.phone">Phone</span>
                                 <a href="tel:+4915510553818" class="info-value">+49 15510 553818</a>
                             </div>
                         </div>
@@ -782,17 +807,17 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="info-text">
-                                <span class="info-label">Location</span>
-                                <span class="info-value">Bleichstraße 46, Offenbach am Main, Germany</span>
+                                <span class="info-label" data-i18n="contact.location">Location</span>
+                                <span class="info-value">München, Germany</span>
                             </div>
                         </div>
                         
                         <div class="contact-socials">
-                            <a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank" class="social-btn">
+                            <a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank" rel="noopener noreferrer" class="social-btn">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
-                            <a href="https://github.com/MOHTADI05" target="_blank" class="social-btn">
+                            <a href="https://github.com/MOHTADI05" target="_blank" rel="noopener noreferrer" class="social-btn">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
@@ -804,17 +829,18 @@
                     <div class="map-container glass-card">
                         <div class="map-placeholder" id="map">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.5834398847456!2d8.760543476822684!3d50.09660171209846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0f0f8d9e3c5b%3A0x8d3c9c8c8c8c8c8c!2sBleichstra%C3%9Fe%2046%2C%2063065%20Offenbach%20am%20Main%2C%20Germany!5e0!3m2!1sen!2sde!4v1699999999999!5m2!1sen!2sde" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.5!2d11.576124!3d48.135125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75f9a38c1fd1%3A0x376b0b2d55e3a4f5!2sM%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sde!4v1699999999999!5m2!1sen!2sde" 
                                 width="100%" 
                                 height="100%" 
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Map showing location in München, Germany">
                             </iframe>
                             <div class="map-overlay">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <p>Offenbach am Main</p>
+                                <p>München</p>
                             </div>
                         </div>
                     </div>
@@ -824,23 +850,23 @@
             <!-- Contact Form -->
             <div class="contact-form-wrapper" data-aos="fade-up">
                 <form class="contact-form glass-card" id="contact-form">
-                    <h3>Send Me a Message</h3>
+                    <h3 data-i18n="contact.sendMessage">Send Me a Message</h3>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" data-i18n-placeholder="contact.yourName" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" data-i18n-placeholder="contact.yourEmail" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" data-i18n-placeholder="contact.subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="6" data-i18n-placeholder="contact.message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
+                        <span data-i18n="contact.sendButton">Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -855,12 +881,12 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h2>MM</h2>
-                    <p>Building the future with AI & Data Science</p>
+                    <p data-i18n="footer.tagline">Building the future with AI & Data Science</p>
                 </div>
                 
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Navigation</h4>
+                        <h4 data-i18n="footer.navigation">Navigation</h4>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
@@ -870,33 +896,105 @@
                     </div>
                     
                     <div class="footer-column">
-                        <h4>Connect</h4>
+                        <h4 data-i18n="footer.connect">Connect</h4>
                         <ul>
                             <li><a href="#blog">Blog</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://github.com/MOHTADI05" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/mohtadi-marmouri" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://github.com/MOHTADI05" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Mohtadi Marmouri. All rights reserved.</p>
-                <p>Designed & Developed with <i class="fas fa-heart"></i> in Germany</p>
+                <p>&copy; 2025 Mohtadi Marmouri. <span data-i18n="footer.rights">All rights reserved.</span></p>
+                <p><span data-i18n="footer.designed">Designed & Developed with</span> <i class="fas fa-heart"></i> <span data-i18n="footer.in">in</span> Germany</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scroll-top">
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Language switcher toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('language-dropdown');
+        const currentLangFlag = document.getElementById('current-lang-flag');
+        
+        if (langToggle && langDropdown) {
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.remove('active');
+                }
+            });
+            
+            // Update flag based on current language
+            const flagMap = {
+                'en': '🇬🇧',
+                'de': '🇩🇪',
+                'fr': '🇫🇷',
+                'ar': '🇸🇦'
+            };
+            
+            function updateFlag() {
+                if (currentLangFlag) {
+                    currentLangFlag.textContent = flagMap[currentLanguage] || '🇬🇧';
+                }
+            }
+            
+            // Override setLanguage to update flag
+            const originalSetLanguage = window.setLanguage;
+            window.setLanguage = function(lang) {
+                originalSetLanguage(lang);
+                updateFlag();
+                langDropdown.classList.remove('active');
+            };
+            
+            updateFlag();
+        }
+        
+        // Handle placeholder translations
+        function updatePlaceholders() {
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                const keys = key.split('.');
+                let value = translations[currentLanguage];
+                
+                for (const k of keys) {
+                    value = value?.[k];
+                }
+                
+                if (value !== undefined) {
+                    element.placeholder = value;
+                }
+            });
+        }
+        
+        // Update placeholders when language changes
+        const originalTranslate = window.translatePage;
+        if (originalTranslate) {
+            window.translatePage = function() {
+                originalTranslate();
+                updatePlaceholders();
+            };
+        }
+        
+        updatePlaceholders();
+    </script>
 </body>
 </html>
 

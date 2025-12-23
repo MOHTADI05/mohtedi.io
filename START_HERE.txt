@@ -133,7 +133,7 @@ See DEPLOYMENT.md for detailed instructions!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📧 Email: mohtadimarmouri@gmail.com
-📍 Location: Offenbach am Main, Germany
+📍 Location: München, Germany
 🔗 GitHub: github.com/mohtadi
 
 Read the documentation files above for detailed help!

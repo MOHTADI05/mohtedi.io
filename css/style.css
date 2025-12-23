@@ -208,6 +208,35 @@ body {
     position: relative;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+    transition: direction 0.3s ease;
+}
+
+/* RTL Support */
+body.rtl {
+    direction: rtl;
+    font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+}
+
+body.rtl .container,
+body.rtl .nav-container,
+body.rtl .hero-content,
+body.rtl .about-content,
+body.rtl .details-grid {
+    direction: rtl;
+}
+
+body.rtl .nav-list,
+body.rtl .hero-cta,
+body.rtl .hero-socials,
+body.rtl .project-tags,
+body.rtl .tech-tags {
+    direction: rtl;
+}
+
+body.rtl .cta-btn i,
+body.rtl .blog-link i,
+body.rtl .view-project i {
+    transform: scaleX(-1);
 }
 
 body::before {

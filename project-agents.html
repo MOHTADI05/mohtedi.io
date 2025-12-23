@@ -22,8 +22,34 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-detail.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="language-switcher">
+        <button class="lang-switcher-btn" id="lang-toggle" aria-label="Change language">
+            <span id="current-lang-flag">🇬🇧</span>
+        </button>
+        <div class="language-dropdown" id="language-dropdown">
+            <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">
+                <span class="flag">🇬🇧</span>
+                <span class="lang-name">English</span>
+            </button>
+            <button class="lang-btn" data-lang="de" onclick="setLanguage('de')">
+                <span class="flag">🇩🇪</span>
+                <span class="lang-name">Deutsch</span>
+            </button>
+            <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">
+                <span class="flag">🇫🇷</span>
+                <span class="lang-name">Français</span>
+            </button>
+            <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">
+                <span class="flag">🇸🇦</span>
+                <span class="lang-name">العربية</span>
+            </button>
+        </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -32,12 +58,12 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="index.html#home" class="nav-link">Home</a></li>
-                    <li><a href="index.html#about" class="nav-link">About</a></li>
-                    <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
-                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
-                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="index.html#projects" class="nav-link active" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="index.html#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="index.html#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -52,7 +78,7 @@
     <section class="project-hero">
         <div class="container">
             <a href="index.html#projects" class="back-btn" data-aos="fade-right">
-                <i class="fas fa-arrow-left"></i> Back to Projects
+                <i class="fas fa-arrow-left"></i> <span data-i18n="projects.backToProjects">Back to Projects</span>
             </a>
             
             <div class="project-hero-content" data-aos="fade-up">
@@ -309,8 +335,22 @@
     </button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/project-slideshow.js"></script>
+    <script>
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('language-dropdown');
+        const currentLangFlag = document.getElementById('current-lang-flag');
+        if (langToggle && langDropdown) {
+            langToggle.addEventListener('click', (e) => { e.stopPropagation(); langDropdown.classList.toggle('active'); });
+            document.addEventListener('click', (e) => { if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) langDropdown.classList.remove('active'); });
+            const flagMap = { 'en': '🇬🇧', 'de': '🇩🇪', 'fr': '🇫🇷', 'ar': '🇸🇦' };
+            if (currentLangFlag) currentLangFlag.textContent = flagMap[currentLanguage] || '🇬🇧';
+            const originalSetLanguage = window.setLanguage;
+            window.setLanguage = function(lang) { originalSetLanguage(lang); if (currentLangFlag) currentLangFlag.textContent = flagMap[lang] || '🇬🇧'; langDropdown.classList.remove('active'); };
+        }
+    </script>
 </body>
 </html>
 

@@ -88,7 +88,7 @@ mohtedi.io/
 - ✅ Languages: Arabic, French, English, German
 - ✅ Timeline parallax effect with academic path
 - ✅ 3D tilt effect on hover
-- ✅ Location: Offenbach, Germany
+- ✅ Location: München, Germany
 
 ### 💼 4. Projects Section ✅
 All 6 projects implemented with animated cards:
@@ -180,7 +180,7 @@ All 6 service cards with dynamic parallax icons:
   - ✅ Name: Mohtadi Marmouri
   - ✅ Email: mohtadimarmouri@gmail.com
   - ✅ Phone: +49 15510 553818
-  - ✅ Address: Bleichstraße 46, Offenbach am Main
+  - ✅ Address: München, Germany
 - ✅ LinkedIn + GitHub buttons
 - ✅ Interactive Google Map embed
 - ✅ Parallax floating map element
@@ -407,7 +407,7 @@ Dark Background:  #0a0e0d
 
 **Creator**: Mohtadi Marmouri
 **Email**: mohtadimarmouri@gmail.com
-**Location**: Offenbach am Main, Germany
+**Location**: München, Germany
 **Phone**: +49 15510 553818
 
 ### Resources

@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupBlogFilters();
     setupContactForm();
     setupTypingEffect();
+    setupSkillsCarousel();
     setupSmoothScroll();
 });
 
@@ -740,7 +741,38 @@ if (typeof module !== 'undefined' && module.exports) {
         setupParallax,
         setupBlogFilters,
         setupContactForm,
-        showNotification
+        showNotification,
+    setupSkillsCarousel
     };
+}
+
+// ============================================
+// SKILLS CAROUSEL
+// ============================================
+function setupSkillsCarousel() {
+    const skillsTrack = document.getElementById('skills-track');
+    if (!skillsTrack) return;
+    
+    // Ensure smooth animation with hardware acceleration
+    skillsTrack.style.willChange = 'transform';
+    skillsTrack.style.backfaceVisibility = 'hidden';
+    skillsTrack.style.webkitBackfaceVisibility = 'hidden';
+    skillsTrack.style.transform = 'translateZ(0)';
+    skillsTrack.style.webkitTransform = 'translateZ(0)';
+    
+    // Pause on hover for better UX
+    const carousel = document.querySelector('.skills-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', () => {
+            skillsTrack.style.animationPlayState = 'paused';
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            skillsTrack.style.animationPlayState = 'running';
+        });
+    }
+    
+    // Ensure smooth infinite loop - no reset needed with proper CSS
+    // The animation will loop infinitely and smoothly
 }
 

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T2425WQQ');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mohtadi Marmouri - AI, Data Science, Software Engineering & FinTech Portfolio">
@@ -39,6 +46,10 @@
     <link rel="stylesheet" href="css/language-switcher.css">
 </head>
 <body class="loading">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2425WQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- AI Thinking Loader -->
     <div class="loader-wrapper" id="page-loader">
         <div class="loader-content">
@@ -62,7 +73,7 @@
     <!-- Language Switcher -->
     <div class="language-switcher" id="language-switcher">
         <button class="lang-switcher-btn" id="lang-toggle" aria-label="Change language">
-            <span id="current-lang-flag">LANG</span>
+            <span id="current-lang-flag">EN</span>
         </button>
         <div class="language-dropdown" id="language-dropdown">
             <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">
@@ -110,7 +121,7 @@
             </button>
         </div>
     </nav>
-
+<br>
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="particles-bg" id="particles-js"></div>
@@ -536,6 +547,37 @@
                         </span>
                     </div>
                 </a>
+
+                <!-- Project 9 -->
+                <a href="https://portfolio-optimizer-ylruxe9gv66bnkhtesgjar.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-card glass-card project-link-card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">FinTech & Research</span>
+                        <h3 class="project-title">Portfolio Optimizer MVP</h3>
+                        <p class="project-description">
+                            Advanced portfolio optimization using Topological Graph Diffusion Arbitrage for mixed S&P 500 and 
+                            cryptocurrency assets. Implements graph Laplacian diffusion signals, persistent homology for regime 
+                            detection, and CVXPY-based mean-variance optimization with market neutrality and robust covariance estimation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Portfolio Optimization</span>
+                            <span class="tag">Graph Theory</span>
+                            <span class="tag">Topology</span>
+                            <span class="tag">CVXPY</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-type">
+                            <i class="fas fa-external-link-alt"></i> Live App
+                        </span>
+                        <span class="view-project">
+                            <span>View App</span> <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -549,94 +591,145 @@
                 <p class="section-subtitle" data-i18n="skills.subtitle">Comprehensive technical expertise across multiple domains</p>
             </div>
             
-            <div class="skills-grid">
-                <!-- Skill 1 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Machine Learning & Deep Learning</h3>
-                    <p>Building intelligent models with TensorFlow, PyTorch, and scikit-learn for predictive analytics and pattern recognition</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> Neural Networks</span>
-                        <span><i class="fas fa-check"></i> Computer Vision</span>
-                        <span><i class="fas fa-check"></i> NLP</span>
-                        <span><i class="fas fa-check"></i> Predictive Modeling</span>
-                    </div>
-                </div>
+            <!-- Skills Carousel -->
+            <div class="skills-carousel-wrapper" data-aos="fade-up">
+                <div class="skills-carousel" id="skills-carousel">
+                    <div class="skills-track" id="skills-track">
+                        <!-- Skill 1 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Machine Learning & Deep Learning</h3>
+                            <p>Building intelligent models with TensorFlow, PyTorch, and scikit-learn for predictive analytics and pattern recognition</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Neural Networks</span>
+                                <span><i class="fas fa-check"></i> Computer Vision</span>
+                                <span><i class="fas fa-check"></i> NLP</span>
+                                <span><i class="fas fa-check"></i> Predictive Modeling</span>
+                            </div>
+                        </div>
 
-                <!-- Skill 2 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Data Engineering</h3>
-                    <p>Designing and implementing scalable ETL pipelines with Apache Spark, Databricks, and cloud platforms</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> Apache Spark</span>
-                        <span><i class="fas fa-check"></i> Databricks</span>
-                        <span><i class="fas fa-check"></i> ETL Pipelines</span>
-                        <span><i class="fas fa-check"></i> Big Data</span>
-                    </div>
-                </div>
+                        <!-- Skill 2 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Engineering</h3>
+                            <p>Designing and implementing scalable ETL pipelines with Apache Spark, Databricks, and cloud platforms</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Apache Spark</span>
+                                <span><i class="fas fa-check"></i> Databricks</span>
+                                <span><i class="fas fa-check"></i> ETL Pipelines</span>
+                                <span><i class="fas fa-check"></i> Big Data</span>
+                            </div>
+                        </div>
 
-                <!-- Skill 3 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Full-stack development with modern frameworks including Angular, Django, Spring Boot, and Flask</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> Angular</span>
-                        <span><i class="fas fa-check"></i> Spring Boot</span>
-                        <span><i class="fas fa-check"></i> Django/Flask</span>
-                        <span><i class="fas fa-check"></i> RESTful APIs</span>
-                    </div>
-                </div>
+                        <!-- Skill 3 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>Full-stack development with modern frameworks including Angular, Django, Spring Boot, and Flask</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Angular</span>
+                                <span><i class="fas fa-check"></i> Spring Boot</span>
+                                <span><i class="fas fa-check"></i> Django/Flask</span>
+                                <span><i class="fas fa-check"></i> RESTful APIs</span>
+                            </div>
+                        </div>
 
-                <!-- Skill 4 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="skill-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Deploying and managing scalable applications on Azure with automated CI/CD pipelines</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> Microsoft Azure</span>
-                        <span><i class="fas fa-check"></i> CI/CD</span>
-                        <span><i class="fas fa-check"></i> Docker</span>
-                        <span><i class="fas fa-check"></i> DevOps</span>
-                    </div>
-                </div>
+                        <!-- Skill 4 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Cloud Solutions</h3>
+                            <p>Deploying and managing scalable applications on Azure with automated CI/CD pipelines</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Microsoft Azure</span>
+                                <span><i class="fas fa-check"></i> CI/CD</span>
+                                <span><i class="fas fa-check"></i> Docker</span>
+                                <span><i class="fas fa-check"></i> DevOps</span>
+                            </div>
+                        </div>
 
-                <!-- Skill 5 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>FinTech Modeling</h3>
-                    <p>Actuarial analytics, IFRS fundamentals, Monte Carlo simulations, and Black-Scholes pricing models</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> Actuarial Science</span>
-                        <span><i class="fas fa-check"></i> Financial Modeling</span>
-                        <span><i class="fas fa-check"></i> Risk Analysis</span>
-                        <span><i class="fas fa-check"></i> IFRS</span>
-                    </div>
-                </div>
+                        <!-- Skill 5 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>FinTech Modeling</h3>
+                            <p>Actuarial analytics, IFRS fundamentals, Monte Carlo simulations, and Black-Scholes pricing models</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Actuarial Science</span>
+                                <span><i class="fas fa-check"></i> Financial Modeling</span>
+                                <span><i class="fas fa-check"></i> Risk Analysis</span>
+                                <span><i class="fas fa-check"></i> IFRS</span>
+                            </div>
+                        </div>
 
-                <!-- Skill 6 -->
-                <div class="skill-card glass-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="skill-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Security & Backend APIs</h3>
-                    <p>Implementing secure backend architectures with comprehensive security compliance</p>
-                    <div class="skill-features">
-                        <span><i class="fas fa-check"></i> JWT + Refresh Tokens</span>
-                        <span><i class="fas fa-check"></i> MFA (Email/App)</span>
-                        <span><i class="fas fa-check"></i> RBAC</span>
-                        <span><i class="fas fa-check"></i> AES-256 Encryption</span>
+                        <!-- Skill 6 -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Security & Backend APIs</h3>
+                            <p>Implementing secure backend architectures with comprehensive security compliance</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> JWT + Refresh Tokens</span>
+                                <span><i class="fas fa-check"></i> MFA (Email/App)</span>
+                                <span><i class="fas fa-check"></i> RBAC</span>
+                                <span><i class="fas fa-check"></i> AES-256 Encryption</span>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate cards for infinite loop -->
+                        <!-- Skill 1 Duplicate -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Machine Learning & Deep Learning</h3>
+                            <p>Building intelligent models with TensorFlow, PyTorch, and scikit-learn for predictive analytics and pattern recognition</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Neural Networks</span>
+                                <span><i class="fas fa-check"></i> Computer Vision</span>
+                                <span><i class="fas fa-check"></i> NLP</span>
+                                <span><i class="fas fa-check"></i> Predictive Modeling</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2 Duplicate -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Engineering</h3>
+                            <p>Designing and implementing scalable ETL pipelines with Apache Spark, Databricks, and cloud platforms</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Apache Spark</span>
+                                <span><i class="fas fa-check"></i> Databricks</span>
+                                <span><i class="fas fa-check"></i> ETL Pipelines</span>
+                                <span><i class="fas fa-check"></i> Big Data</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3 Duplicate -->
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>Full-stack development with modern frameworks including Angular, Django, Spring Boot, and Flask</p>
+                            <div class="skill-features">
+                                <span><i class="fas fa-check"></i> Angular</span>
+                                <span><i class="fas fa-check"></i> Spring Boot</span>
+                                <span><i class="fas fa-check"></i> Django/Flask</span>
+                                <span><i class="fas fa-check"></i> RESTful APIs</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1006,15 +1099,15 @@
             
             // Update flag based on current language
             const flagMap = {
-                'en': '🇬🇧',
-                'de': '🇩🇪',
-                'fr': '🇫🇷',
-                'ar': '🇸🇦'
+                'en': 'EN',
+                'de': 'DE',
+                'fr': 'FR',
+                'ar': 'AR'
             };
             
             function updateFlag() {
                 if (currentLangFlag) {
-                    currentLangFlag.textContent = flagMap[currentLanguage] || '🇬🇧';
+                    currentLangFlag.textContent = flagMap[currentLanguage] || 'EN';
                 }
             }
             
@@ -1022,7 +1115,9 @@
             const originalSetLanguage = window.setLanguage;
             window.setLanguage = function(lang) {
                 originalSetLanguage(lang);
-                updateFlag();
+                if (currentLangFlag) {
+                    currentLangFlag.textContent = flagMap[lang] || 'EN';
+                }
                 langDropdown.classList.remove('active');
             };
             

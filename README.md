@@ -1,18 +1,23 @@
 # Mohtadi Marmouri - Portfolio Website
 
-A modern, responsive portfolio website with stunning parallax animations and dark theme design.
+A modern, responsive portfolio website with stunning parallax animations, dark theme design, and multi-language support. Features 9 showcased projects including live Streamlit applications for financial modeling and risk analysis.
 
 ## 🌟 Features
 
 - **Smooth Parallax Animations** - Multi-layer parallax effects throughout the site
 - **Dark Theme Design** - Deep green (#123513) accents with cloud-white/beige highlights
 - **Fully Responsive** - Optimized for mobile, tablet, and desktop
-- **Glass Morphism UI** - Modern soft-glass cards with subtle shadows
+- **Glass Morphism UI** - Modern soft-glass cards with liquid glass navbar effect
+- **Multi-Language Support** - Full translation support for English, Deutsch, Français, and العربية (Arabic) with RTL support
 - **Particle Background** - Interactive particle system using Particles.js
 - **Smooth Scrolling** - Elegant navigation with section transitions
 - **Interactive Blog** - Filterable blog section with category sorting
 - **Contact Form** - Functional contact form with validation
+- **Project Detail Pages** - Individual pages for each major project with slideshow effects
+- **Interactive Demos** - Banking flip cards and crypto risk prediction cards
+- **AI Thinking Loader** - Custom animated loader on page load
 - **SEO Optimized** - Meta tags and semantic HTML structure
+- **Accessibility** - ARIA labels, keyboard navigation, and screen reader support
 
 ## 🎨 Color Palette
 
@@ -59,22 +64,36 @@ php -S localhost:8000
 
 ```
 mohtedi.io/
-├── index.html              # Main HTML file
+├── index.html                    # Main HTML file
+├── project-talan.html           # Data Science Intern - Talan project page
+├── project-library.html          # National Library project page
+├── project-dyslexia.html         # Adaptive Learning Platform project page
+├── project-securassur.html       # SecurAssur Insurance Platform project page
+├── project-erp.html              # ERP Modules project page
+├── project-agents.html           # Multi-Agent Systems project page
 ├── css/
-│   └── style.css          # All styles and animations
+│   ├── style.css                 # Main styles and animations
+│   ├── language-switcher.css    # Language switcher styles
+│   ├── project-detail.css        # Project detail page styles
+│   └── interactive-cards.css     # Interactive demo card styles
 ├── js/
-│   └── main.js            # JavaScript functionality
+│   ├── main.js                   # Main JavaScript functionality
+│   ├── translations.js           # Multi-language translation system
+│   └── project-slideshow.js      # Project slideshow functionality
 ├── assets/
-│   ├── profile.jpg        # Profile picture
-│   ├── Mohtadi_Marmouri_CV.pdf  # CV/Resume
-│   └── blog/              # Blog post images
-│       ├── ai-fintech.jpg
-│       ├── data-pipeline.jpg
-│       ├── devops.jpg
-│       ├── studies.jpg
-│       ├── internship.jpg
-│       └── neural-networks.jpg
-└── README.md              # This file
+│   ├── image/
+│   │   ├── logo.png              # Favicon/logo
+│   │   └── selfie.png            # Profile picture
+│   ├── projects/                 # Project images directory
+│   ├── blog/                     # Blog post images
+│   │   ├── ai-fintech.jpg
+│   │   ├── data-pipeline.jpg
+│   │   ├── devops.jpg
+│   │   ├── studies.jpg
+│   │   ├── internship.jpg
+│   │   └── neural-networks.jpg
+│   └── Mohtadi_Marmouri_CV.pdf   # CV/Resume
+└── README.md                     # This file
 ```
 
 ## 🖼️ Assets Setup
@@ -83,15 +102,17 @@ mohtedi.io/
 
 Place the following images in the specified directories:
 
-1. **Profile Picture** - `assets/profile.jpg` (recommended: 500x500px, square)
-2. **Blog Images** - `assets/blog/` directory (recommended: 800x400px each)
+1. **Profile Picture** - `assets/image/selfie.png` (recommended: 500x500px, square)
+2. **Logo/Favicon** - `assets/image/logo.png` (recommended: 32x32px or 64x64px)
+3. **Blog Images** - `assets/blog/` directory (recommended: 800x400px each)
    - ai-fintech.jpg
    - data-pipeline.jpg
    - devops.jpg
    - studies.jpg
    - internship.jpg
    - neural-networks.jpg
-3. **CV/Resume** - `assets/Mohtadi_Marmouri_CV.pdf`
+4. **Project Images** - `assets/projects/` directory (for project detail pages)
+5. **CV/Resume** - `assets/Mohtadi_Marmouri_CV.pdf`
 
 ### Placeholder Images
 
@@ -101,13 +122,15 @@ If you don't have images yet, you can use placeholder services:
 
 ## 🛠️ Technologies Used
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Flexbox & Grid
-- **JavaScript (ES6+)** - Interactive functionality
+- **HTML5** - Semantic markup with accessibility features
+- **CSS3** - Modern styling with Flexbox, Grid, and CSS Variables
+- **JavaScript (ES6+)** - Interactive functionality and language switching
 - **Particles.js** - Particle background effects
 - **AOS (Animate On Scroll)** - Scroll animations
 - **Font Awesome** - Icon library
 - **Google Fonts** - Inter & JetBrains Mono fonts
+- **Google Maps API** - Interactive location map
+- **LocalStorage** - Language preference persistence
 
 ## 📱 Responsive Breakpoints
 
@@ -118,12 +141,21 @@ If you don't have images yet, you can use placeholder services:
 
 ## 🎯 Sections
 
-1. **Hero Section** - Name, tagline, CTA buttons, floating code snippets
-2. **About Me** - Biography, academic journey timeline
-3. **Projects** - Showcase of major projects with detailed descriptions
-4. **Skills & Services** - Technical expertise and services offered
+1. **Hero Section** - Name, tagline, CTA buttons, floating code snippets, social links
+2. **About Me** - Biography, academic journey timeline, languages, location
+3. **Projects** - Showcase of 9 major projects including:
+   - Data Science Intern - Talan (Banking Data Analysis)
+   - National Library of Tunisia Platform
+   - Adaptive Learning Platform for Dyslexia
+   - SecurAssur - Insurance Platform
+   - ERP Modules & FinTech Dashboards
+   - Multi-Agent Systems & AI Innovation
+   - **Black-Scholes Options Pricing Model** (Live Streamlit App)
+   - **Catastrophe Risk Pool Optimizer** (Live Streamlit App)
+   - **Portfolio Optimizer MVP** (Live Streamlit App)
+4. **Skills & Services** - Technical expertise and services offered with security highlights
 5. **Blog** - Articles on AI/ML, Data Engineering, DevOps, etc.
-6. **Contact** - Contact form, info, and interactive map
+6. **Contact** - Contact form, info, and interactive map (München, Germany)
 7. **Footer** - Links and social media
 
 ## ⚙️ Customization
@@ -156,6 +188,27 @@ Adjust parallax speed in `js/main.js`:
 const speed = (index + 1) * 0.15; // Modify multiplier
 ```
 
+## 🌐 Multi-Language Support
+
+The website supports 4 languages with full RTL support for Arabic:
+
+- **English** (en) - Default
+- **Deutsch** (de) - German
+- **Français** (fr) - French
+- **العربية** (ar) - Arabic (with RTL layout)
+
+### Language Switcher
+
+- Fixed position button in top-right corner (shows "LANG" or language code)
+- Dropdown menu for language selection
+- Language preference saved in localStorage
+- Automatic RTL layout switching for Arabic
+- All pages support language switching
+
+### Adding Translations
+
+Edit `js/translations.js` to add or modify translations. The translation system uses `data-i18n` attributes in HTML elements. All project pages also support translations.
+
 ## 🔒 Security Features Implemented
 
 - JWT + Refresh Tokens
@@ -170,9 +223,9 @@ const speed = (index + 1) * 0.15; // Modify multiplier
 
 ## 📧 Contact Form Integration
 
-The contact form is currently set up to display success messages. To integrate with a backend:
+The contact form is currently set up to display success messages with multi-language support. To integrate with a backend:
 
-1. Update the form submission in `js/main.js`
+1. Update the form submission in `js/main.js` (function `setupContactForm()`)
 2. Add your backend API endpoint
 3. Configure email service (SendGrid, Mailgun, etc.)
 
@@ -186,6 +239,8 @@ fetch('/api/contact', {
 })
 ```
 
+The form automatically shows translated success messages based on the current language.
+
 ## 🚀 Deployment
 
 ### GitHub Pages
@@ -194,6 +249,8 @@ fetch('/api/contact', {
 2. Go to repository Settings > Pages
 3. Select branch and root folder
 4. Your site will be live at `https://yourusername.github.io/mohtedi.io`
+
+**Note**: Make sure all file paths are relative (not absolute) for GitHub Pages to work correctly.
 
 ### Netlify
 
@@ -207,6 +264,10 @@ fetch('/api/contact', {
 1. Import your GitHub repository
 2. Framework Preset: Other
 3. Deploy!
+
+### Custom Domain
+
+After deployment, you can add a custom domain in your hosting provider's settings. Update the `base` tag in HTML if needed.
 
 ## 📄 License
 
@@ -238,20 +299,21 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🐛 Known Issues
 
-- Map may require Google Maps API key for production
+- Map may require Google Maps API key for production (currently using embed)
 - Blog images are placeholders and need to be replaced
 - Contact form needs backend integration for email sending
+- Some browser extensions may show console errors (filtered in code)
 
 ## 🔮 Future Enhancements
 
 - [ ] Dark/Light mode toggle
-- [ ] Multi-language support
 - [ ] Blog CMS integration
-- [ ] Project case studies with full pages
 - [ ] Testimonials section
 - [ ] Downloadable resources
 - [ ] Newsletter subscription
 - [ ] Search functionality
+- [ ] More interactive project demos
+- [ ] Blog post detail pages
 
 ---
 
